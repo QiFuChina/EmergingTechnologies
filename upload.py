@@ -3,7 +3,7 @@ from flask import Flask, request, redirect, url_for
 from werkzeug.utils import secure_filename
 from flask import send_from_directory
 
-UPLOAD_FOLDER = '/path/to/the/uploads'
+UPLOAD_FOLDER = 'uploads'
 ALLOWED_EXTENSIONS = set(['txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'])
 
 app = Flask(__name__)
@@ -16,8 +16,9 @@ def allowed_file(filename):
 
 @app.route('/uploads/<filename>')
 def uploaded_file(filename):
-    return send_from_directory(app.config['UPLOAD_FOLDER'],
-                               filename)
+    return send_from_directory(app.config['UPLOAD_FOLDER'],filename)
+
+#@app.route()
 
 @app.route('/', methods=['GET', 'POST'])
 def upload_file():
@@ -35,8 +36,8 @@ def upload_file():
         if file and allowed_file(file.filename):
             filename = secure_filename(file.filename)
             file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-            return redirect(url_for('uploaded_file',
-                                    filename=filename))
+            #return redirect(url_for('uploaded_file',filename=filename))
+            #return img('uploaded_file',filename=filename)
     return '''
     <!doctype html>
     <title>Upload new File</title>
@@ -44,5 +45,7 @@ def upload_file():
     <form method=post enctype=multipart/form-data>
       <p><input type=file name=file>
          <input type=submit value=Upload>
+        <div class="display_window">
+         <img>
     </form>
     '''

@@ -27,6 +27,6 @@ Project instruction
 Files of Model.py, Resave.py, and Upload.py can run successful separately but there are some problems with Model and Upload files that Model.py has problems with import Upload.py elements
 
 > * The result of test MNIST data
- ![alt text](\attaches\model.jpg)
+ ![alt text](https://user-images.githubusercontent.com/24989456/33531511-04c1c93c-d886-11e7-8e09-456218515ce1.jpg)
 > * The result of test MNIST data
-![alt text](\attaches\resave.jpg)
+ ![alt text](https://user-images.githubusercontent.com/24989456/33531512-04dafd12-d886-11e7-9c2c-10daac94a9dd.jpg)

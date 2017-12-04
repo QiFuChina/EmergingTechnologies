@@ -19,7 +19,7 @@ Project instruction
 
 ### Work Principle
 > * Upload.py creates a web application to allow users upload images from local directory to save at designation folder and use function load_image() to read image and resize it 28 x 28 pixel to resave it as black and white colors, then convert it to numpy array format as [1,784] which one row and 784 cloumns.
-  * It contains a part of html code to show a html page when application be started.There is a button to select files and another button to upload image, it also needs a display part to receive the test result.
+> * It contains a part of html code to show a html page when application be started.There is a button to select files and another button to upload image, it also needs a display part to receive the test result.
 
 > * Model.py is a model that uses MNIST data to calculate the prediction and it will test the prediction that by useing image numpy array. After obtain the prediction value, it should be return and showed in the web page.
 
